@@ -17,7 +17,7 @@ vim.opt.title = true
  -- vim.opt.mouse = 'a' -- enable mouse for all modes
  
  -- this is causing issues
--- vim.opt.termguicolors = true
+vim.opt.termguicolors = true
 vim.opt.spell = true
 -- Allow searching case-insensitively
 vim.opt.ignorecase = true
