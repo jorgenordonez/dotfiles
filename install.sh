@@ -15,3 +15,15 @@ ln -s $DOTFILES/scripts/t $HOME/.local/bin/t
 
 rm -rf $HOME/.conig/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
+
+#rm -rf $HOME/.conig/xorg.conf.d
+sudo ln -s $DOTFILES/xorg.conf.d/50-touchpad.conf /etc/X11/xorg.conf.d/50-touchpad.conf
+
+rm -rf $HOME/.config/i3
+ln -s $DOTFILES/i3 $HOME/.config/i3
+
+rm -rf $HOME/.config/polybar
+ln -s $DOTFILES/polybar $HOME/.config/polybar
+
+rm -rf $HOME/.config/picom
+ln -s $DOTFILES/picom $HOME/.config/picom
