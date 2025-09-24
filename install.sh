@@ -27,3 +27,6 @@ ln -s $DOTFILES/polybar $HOME/.config/polybar
 
 rm -rf $HOME/.config/picom
 ln -s $DOTFILES/picom $HOME/.config/picom
+
+rm -rf $HOME/.config/rofi
+ln -s $DOTFILES/rofi $HOME/.config/rofi
