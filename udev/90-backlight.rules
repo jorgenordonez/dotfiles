@@ -1,0 +1,8 @@
+# ACTION=="add", SUBSYSTEM=="backlight", ATTR{brightness}=="*", KERNEL=="nvidia_wmi_ec_backlight", RUN+="/usr/bin/chmod 0666 /sys/class/backlight/%k/brightness"
+ # Make NVIDIA backlight file writable by all users
+#ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="nvidia_wmi_ec_backlight", RUN+="/usr/bin/chmod 0666 /sys/class/backlight/%k/brightness"
+#ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="nvidia_wmi_ec_backlight", RUN+="/usr/bin/chmod 0666 /sys/class/backlight/%k/brightness", RUN+="/usr/bin/logger 'udev brightness rule fired for %k'"
+# Without KERNEL CHECK
+#ACTION=="add", SUBSYSTEM=="backlight", RUN+="/usr/bin/chmod 0666 /sys/class/backlight/%k/brightness", RUN+="/usr/bin/logger 'udev brightness rule fired for %k'"
+
+ACTION=="add", SUBSYSTEM=="backlight", KERNEL=="nvidia_wmi_ec_backlight", RUN+="/usr/bin/chmod 0666 /sys/class/backlight/%k/brightness", RUN+="/usr/bin/logger 'udev brightness rule fired for %k'"

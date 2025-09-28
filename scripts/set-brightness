@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+
+CURRENT_BRIGHTNESS=$(cat /sys/class/backlight/nvidia_wmi_ec_backlight/brightness)
+MAX_BRIGHTNESS=$(cat /sys/class/backlight/nvidia_wmi_ec_backlight/max_brightness)
+
+if [ $1 = "inc" ]; then
+    VAL=$(expr $CURRENT_BRIGHTNESS + 80)
+    if [ $VAL -gt $MAX_BRIGHTNESS ]; then
+        VAL=$MAX_BRIGHTNESS
+    fi
+fi
+
+if [ $1 = "dec" ]; then
+    VAL=$(expr $CURRENT_BRIGHTNESS - 80)
+    if [ $VAL -lt 80 ]; then
+        VAL=80
+    fi
+fi
+
+echo $VAL > /sys/class/backlight/nvidia_wmi_ec_backlight/brightness

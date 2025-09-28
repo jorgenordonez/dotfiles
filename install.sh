@@ -30,3 +30,6 @@ ln -s $DOTFILES/picom $HOME/.config/picom
 
 rm -rf $HOME/.config/rofi
 ln -s $DOTFILES/rofi $HOME/.config/rofi
+
+rm -rf $HOME/.local/bin/set-brightness
+ln -s $DOTFILES/scripts/set-brightness $HOME/.local/bin/set-brightness

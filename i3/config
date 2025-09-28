@@ -222,3 +222,9 @@ client.focused #eb3458 #eb3458 #eb3458 #eb3458
 
 # Make PrtSc key start flameshot
 bindcode 107 exec "flameshot gui"
+
+# Custom brightness controls
+bindcode 232 exec "$HOME/.local/bin/set-brightness dec"
+#bindcode 232 exec "notify-send $(whoami)"
+bindcode 233 exec "$HOME/.local/bin/set-brightness inc"
+#bindcode 233 exec "notify-send 'increment brightness'"
